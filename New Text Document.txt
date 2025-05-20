@@ -183,3 +183,440 @@ class Main {
         
     }
 }
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Prob 1:
+
+Write a program which takes two values x and y. Prints x for y number of times.
+
+Input:
+
+2 
+
+3
+
+Expected Output
+
+2
+
+2
+
+2
+
+Explanation - 2 is x and 3 is y in the input. So 2 is printed 3 times on the output.
+
+
+
+Answer:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter the inputs");
+        Scanner scan = new Scanner(System.in);
+        
+        int value1 = scan.nextInt();
+        int value2 = scan.nextInt();
+        
+        for (int i = value2; i > 0; i--) {
+            System.out.println("Your output is....");
+            System.out.println(value1);
+        }
+    }
+}
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prob 2:
+
+Write a program to take x and print multiples of x till 1000.
+
+Input:
+
+100
+
+Expected Output:
+
+100
+
+200
+
+300
+
+400
+
+500
+
+600
+
+700
+
+800
+
+900
+
+1000
+
+Explanation - Input is 100, multiples of 100 is 100*1, 100*2, 100*3 and so on till 1000.
+
+
+
+Answer:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        System.out.println("Enter the inputs");
+        Scanner scan = new Scanner(System.in);
+        
+        int value = scan.nextInt();
+        
+        for (int i = value; i <= 1000; i=i+value) {
+            System.out.println("Your output is....");
+            System.out.println(i);
+        }
+    }
+}
+
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Prob 3:
+
+Write a program to get firstName and lastName and n as input and print fullName that is firstName+lastName for n times.
+
+Input
+
+Nandy
+
+Raja
+
+5
+
+Expected output:
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+NandyRaja
+
+Explanation - Nandy is the firstName, Raja is the lastName and n is 5, so the expected output has NandyRaja printed 5 times.
+
+
+
+Answer:
+
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        System.out.println("Enter the First name");
+        String firstName = scan.nextLine();
+        System.out.println("Enter the Second name");
+        String lastName = scan.nextLine();
+        System.out.println("Enter the number");
+        int num = scan.nextInt();
+        
+        String fullName = firstName + lastName;
+        
+        for (int i = num; i > 0 ; i--) {
+            
+            System.out.println(fullName);
+        }
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+Write a Program which takes input n and prints the below pattern and upload the code to your github repo.
+
+
+
+Sample 1:
+
+Input:
+
+n = 4
+
+Expected output:
+
+****
+
+***
+
+**
+
+*
+
+
+
+Sample 2
+
+Input:
+
+n= 6
+
+******
+
+*****
+
+****
+
+***
+
+**
+
+*
+
+
+
+Answer:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+    int n = 6;
+    for(int i = 1; i<=n; i++){
+        for(int j=1;j<=n-i+1;j++){
+            System.out.print("*");
+        }
+        System.out.println(' ');
+    }
+    
+    }
+}
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+Enable fullscreen
+Write a Program which takes input n and prints the below pattern and upload the code to your github repo.
+
+
+
+Sample 1:
+
+Input:
+
+n = 4
+
+Expected output:
+
+4321
+
+321
+
+21
+
+1
+
+
+
+Sample 2
+
+Input:
+
+n= 6
+
+654321
+
+54321
+
+4321
+
+321
+
+21
+
+1
+
+
+
+
+Answer:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+    int n = 4;
+    for(int i = n; i>=1; i--){
+        for(int j=i;j>=1;j--){
+            System.out.print(j);
+        }
+        System.out.println(' ');
+    }
+    
+    }
+}
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Write a Program that takes input n and prints the below pattern and upload the code to your github repo.
+
+
+
+Sample 1:
+
+Input:
+
+n = 4
+
+Expected output:
+
+*
+
+**
+
+***
+
+****
+
+
+
+Sample 2
+
+Input:
+
+n= 6
+
+*
+
+**
+
+***
+
+****
+
+*****
+
+******
+
+
+
+
+Answer:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+    int n = 4;
+    for(int i = 1; i<=n; i++){
+        for(int j=1;j<=i;j++){
+            System.out.print('*');
+        }
+        System.out.println(' ');
+    }
+    
+    }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Write a Program that takes input n and prints the below pattern and upload the code to your github repo.
+
+
+
+Sample 1:
+
+Input:
+
+n = 8
+
+Expected output:
+
+1 
+
+2 2 
+
+3 3 3 
+
+4 4 4 4 
+
+5 5 5 5 5 
+
+6 6 6 6 6 6 
+
+7 7 7 7 7 7 7 
+
+8 8 8 8 8 8 8 8 
+
+
+
+Sample 2
+
+Input:
+
+n= 6
+
+1 
+
+2 2 
+
+3 3 3 
+
+4 4 4 4 
+
+5 5 5 5 5 
+
+6 6 6 6 6 6 
+
+
+
+Hint: Check pattern 13 and think in terms of using count.
+
+
+
+Answer:
+
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+
+class Main {
+    public static void main(String[] args) {
+        int n = 6;
+        
+        
+        for(int i=1; i<=n; i++ ){
+            for(int j=1; j<=i; j++){
+                System.out.print(i + " ");
+            }
+            System.out.println(' ');
+        }
+    }
+}
+
